@@ -1,0 +1,19 @@
+{
+  "name": "networkerlib",
+  "version": "0.1.0",
+  "description": "WebSocket library",
+  "main": "Networker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dorian Niemiec",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "networkerlib"
+  }
+}
