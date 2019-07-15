@@ -81,7 +81,7 @@ Networker.prototype._getHeader = function () {
 
 Networker.prototype._getPayload = function () {
   if (this._hasEnough(this._payloadLength)) {
-    let received = this._readBytes(this._payloadLength);
+    let recieved = this._readBytes(this._payloadLength);
     this.socket.emit('served', recieved);
     this._state = 0;
   }
@@ -114,7 +114,6 @@ Networker.prototype._header = function (messageLength) {
 Networker.prototype._send = function () {
   let contentLength = Buffer.allocUnsafe(2);
   contentLength.writeUInt16BE(this._packet.header.length);
-  type.writeUInt16BE(this._packet.header.type);
   debug('Attempting to write...', this._packet);
   this.socket.write(contentLength);
   this.socket.write(this._packet.message);
